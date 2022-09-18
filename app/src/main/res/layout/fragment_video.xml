@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.video.VideoFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.Toolbar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_round_arrow_back_primary"
+            app:title="@string/video"
+            app:menu="@menu/menu_video"
+            app:titleTextColor="@color/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <ImageView
+            android:id="@+id/img_user_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_small"
+            android:layout_marginEnd="@dimen/dimens_small"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toStartOf="@+id/img_more"
+            app:layout_constraintStart_toEndOf="@+id/img_user_profile"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile">
+
+            <TextView
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Maria Kemi" />
+
+            <TextView
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimens_small"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Video" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toStartOf="@+id/img_cancel"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+        <TextView
+            android:id="@+id/tv_caption"
+            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:drawablePadding="@dimen/dimens_small"
+            android:gravity="start"
+            android:text="Lorem ipsum dolor sit ametn, no sea takimata sanctus est orem ipsum dolor sit ametn, no sea takimata sanctus est"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_user_profile" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="@dimen/dimens_small"
+            android:contentDescription="@string/user_profile"
+            android:scaleType="fitXY"
+            android:src="@drawable/dummy_video"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_caption" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/dimens_medium"
+            android:src="@drawable/ic_love_fill"
+            app:layout_constraintStart_toStartOf="@+id/img_user_profile"
+            app:layout_constraintTop_toBottomOf="@+id/video_view" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="10"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageview4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dimens_medium"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="@+id/imageview4"
+            app:layout_constraintStart_toEndOf="@+id/imageview4"
+            app:layout_constraintTop_toTopOf="@+id/imageview4" />
+
+        <TextView
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Lihat semua komentar"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

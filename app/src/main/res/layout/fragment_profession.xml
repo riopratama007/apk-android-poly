@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.profession.ProfessionFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_weight="1"
+            style="@style/TextAppearance.MdcTypographyStyles.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_medium"
+            android:text="@string/profession" />
+
+        <ImageView
+            android:id="@+id/img_add_profession"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimens_medium"
+            android:src="@drawable/ic_add_product" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_profession_two" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Sekretaris" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:layout_marginBottom="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Bekasi" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_profession_one" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Koki" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:layout_marginBottom="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Bekasi" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.store.StoreFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextAppearance.MdcTypographyStyles.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_medium"
+            android:layout_weight="1"
+            android:text="@string/store"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_add_product"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimens_medium"
+            android:contentDescription="@string/add_product"
+            android:src="@drawable/ic_add_product" />
+
+        <ImageView
+            android:id="@+id/img_profile_product"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimens_medium"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/ic_store_profile" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <LinearLayout
+            android:id="@+id/layout_have_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_medium"
+                    android:layout_weight="1"
+                    android:text="@string/special_discount"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/see_all" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/happy_shopping"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_discount_store" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_medium"
+                    android:layout_weight="1"
+                    android:text="@string/poly_bazar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/see_all" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_medium"
+                    android:layout_weight="1"
+                    android:text="@string/poly_serbu"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/see_all" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

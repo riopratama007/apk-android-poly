@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_slider"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.auth.SliderFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/indicator"
+        android:layout_alignParentTop="true" />
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimens_small"
+        android:layout_marginBottom="@dimen/dimens_small"
+        app:ci_gravity="start" />
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimens_medium"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_register"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimens_small"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="@string/register"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_small"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/poppins"
+            android:text="@string/login"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

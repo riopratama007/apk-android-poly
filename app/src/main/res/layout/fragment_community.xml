@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.community.CommunityFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.Toolbar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_round_arrow_back_primary"
+            app:title="@string/community"
+            app:titleTextColor="@color/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_for_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_medium"
+        app:cardBackgroundColor="@color/colorPrimaryVariant"
+        app:cardCornerRadius="@dimen/dimens_medium"
+        app:layout_constraintStart_toStartOf="@+id/app_bar"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <TextView
+            android:id="@+id/tv_for_you"
+            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_small"
+            android:text="@string/for_you"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_your_community"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_small"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimens_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/card_for_you"
+        app:layout_constraintStart_toEndOf="@+id/card_for_you"
+        app:layout_constraintTop_toTopOf="@+id/card_for_you">
+
+        <TextView
+            android:id="@+id/tv_your_community"
+            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_small"
+            android:text="@string/your_community"
+            android:textColor="@color/colorSecondaryVariant" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_for_you"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_for_you">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_medium"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_small"
+                android:layout_marginEnd="@dimen/dimens_small"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_create_community"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/dimens_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/add_community"
+                            android:src="@drawable/ic_add" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/dimens_small"
+                            android:text="@string/create_community"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/dimens_small">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/add_community"
+                            android:src="@drawable/dummy_community_one" />
+
+                        <TextView
+                            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorBlack75"
+                            android:gravity="center"
+                            android:padding="@dimen/dimens_small"
+                            android:text="Beautiful Girl"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/dimens_small">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/add_community"
+                            android:src="@drawable/dummy_community_theree" />
+
+                        <TextView
+                            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorBlack75"
+                            android:gravity="center"
+                            android:padding="@dimen/dimens_small"
+                            android:text="Coffe Break"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/dimens_small">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/add_community"
+                            android:src="@drawable/dummy_community_four" />
+
+                        <TextView
+                            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorBlack75"
+                            android:gravity="center"
+                            android:padding="@dimen/dimens_small"
+                            android:text="BUMDES Jawa Barat"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_user_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="@dimen/dimens_medium"
+                android:contentDescription="@string/user_profile"
+                android:src="@drawable/user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_small"
+                android:layout_marginEnd="@dimen/dimens_small"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+                app:layout_constraintEnd_toStartOf="@+id/img_more"
+                app:layout_constraintStart_toEndOf="@+id/img_user_profile"
+                app:layout_constraintTop_toTopOf="@+id/img_user_profile">
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Sinta Whina > Jual Beli Kucing" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="30 Menit yang lalu" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_more"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/dimens_medium"
+                android:contentDescription="@string/user_profile"
+                android:src="@drawable/ic_more"
+                app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+                app:layout_constraintEnd_toStartOf="@+id/img_cancel"
+                app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/dimens_medium"
+                android:contentDescription="@string/user_profile"
+                android:src="@drawable/ic_cancel"
+                app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+            <TextView
+                android:id="@+id/tv_caption"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_small"
+                android:drawablePadding="@dimen/dimens_small"
+                android:gravity="start"
+                android:text="Lepas Adopt Kucing Ku Male 9 Bulan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_user_profile" />
+
+            <ImageView
+                android:id="@+id/img_feed"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="@dimen/dimens_small"
+                android:contentDescription="@string/user_profile"
+                android:scaleType="fitXY"
+                android:src="@drawable/dummy_community_cat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_caption" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:src="@drawable/ic_love_border"
+                app:layout_constraintStart_toStartOf="@+id/img_user_profile"
+                app:layout_constraintTop_toBottomOf="@+id/img_feed" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="175"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageview4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:src="@drawable/ic_comment"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <TextView
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="150"
+                app:layout_constraintBottom_toBottomOf="@+id/imageview4"
+                app:layout_constraintStart_toEndOf="@+id/imageview4"
+                app:layout_constraintTop_toTopOf="@+id/imageview4" />
+
+            <TextView
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Lihat semua komentar"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_your_community"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimens_medium"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/card_for_you"
+        app:layout_constraintTop_toBottomOf="@+id/card_for_you">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_medium"
+            android:text="Komunitas yang Kamu Kelola" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/dimens_small"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/dimens_small">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/add_community"
+                    android:src="@drawable/dummy_community_two" />
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorBlack75"
+                    android:gravity="center"
+                    android:padding="@dimen/dimens_small"
+                    android:text="Sepeda Bekasi"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_community"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_small"
+            android:text="@string/create_community" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

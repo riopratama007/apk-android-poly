@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.poly.ui.fragment.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_adsFragment"
+            app:destination="@id/adsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addJobFragment"
+            app:destination="@id/addJobFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_mainFragment_to_addBusinessFragment"
+            app:destination="@id/addBusinessFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addStoreFragment"
+            app:destination="@id/addStoreFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_storeProfileFragment"
+            app:destination="@id/storeProfileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addMomentFragment"
+            app:destination="@id/addMomentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.poly.ui.fragment.community.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_createCommunityFragment"
+            app:destination="@id/createCommunityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCommunityFragment"
+        android:name="com.poly.ui.fragment.community.CreateCommunityFragment"
+        android:label="fragment_create_community"
+        tools:layout="@layout/fragment_create_community" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.poly.ui.fragment.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/adsFragment"
+        android:name="com.poly.ui.fragment.ads.AdsFragment"
+        android:label="fragment_ads"
+        tools:layout="@layout/fragment_ads" >
+        <action
+            android:id="@+id/action_adsFragment_to_addMyAddFragment"
+            app:destination="@id/addMyAddFragment" />
+        <action
+            android:id="@+id/action_adsFragment_to_addSponsorAdsFragment"
+            app:destination="@id/addSponsorAdsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMyAddFragment"
+        android:name="com.poly.ui.fragment.ads.AddMyAdsFragment"
+        android:label="fragment_add_my_add"
+        tools:layout="@layout/fragment_add_my_ads" />
+    <fragment
+        android:id="@+id/addSponsorAdsFragment"
+        android:name="com.poly.ui.fragment.ads.AddSponsorAdsFragment"
+        android:label="fragment_add_sponsor_ads"
+        tools:layout="@layout/fragment_add_sponsor_ads" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.poly.ui.fragment.store.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/addJobFragment"
+        android:name="com.poly.ui.fragment.job.AddJobFragment"
+        android:label="fragment_add_job"
+        tools:layout="@layout/fragment_add_job" >
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="Add" />
+        <argument
+            android:name="dataJob"
+            app:argType="com.poly.core.data.source.remote.response.Job$Response$Data"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_addJobFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBusinessFragment"
+        android:name="com.poly.ui.fragment.business.AddBusinessFragment"
+        android:label="fragment_add_business"
+        tools:layout="@layout/fragment_add_business" >
+        <action
+            android:id="@+id/action_addBusinessFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="Add" />
+        <argument
+            android:name="dataBusiness"
+            app:argType="com.poly.core.data.source.remote.response.Business$Response$Data"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStoreFragment"
+        android:name="com.poly.ui.fragment.store.AddStoreFragment"
+        android:label="fragment_add_store"
+        tools:layout="@layout/fragment_add_store" >
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="Add" />
+        <argument
+            android:name="dataStore"
+            app:argType="com.poly.core.data.source.remote.response.Store$Response$Data$Result"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_addStoreFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeProfileFragment"
+        android:name="com.poly.ui.fragment.store.StoreProfileFragment"
+        android:label="fragment_store_profile"
+        tools:layout="@layout/fragment_store_profile" >
+        <action
+            android:id="@+id/action_storeProfileFragment_to_addStoreFragment"
+            app:destination="@id/addStoreFragment" />
+        <argument
+            android:name="dataStore"
+            app:argType="com.poly.core.data.source.remote.response.Store$Response$Data$Result"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMomentFragment"
+        android:name="com.poly.ui.fragment.home.AddMomentFragment"
+        android:label="fragment_add_moment"
+        tools:layout="@layout/fragment_add_moment" />
+</navigation>

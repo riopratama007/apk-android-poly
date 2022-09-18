@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimens_small">8dp</dimen>
+    <dimen name="dimens_medium">16dp</dimen>
+    <dimen name="dimens_large">32dp</dimen>
+    <dimen name="dimens_extra_large">54dp</dimen>
+    <dimen name="dimens_status_bar">30dp</dimen>
+    <dimen name="icon_size_small">40dp</dimen>
+    <dimen name="icon_size_medium">60dp</dimen>
+</resources>

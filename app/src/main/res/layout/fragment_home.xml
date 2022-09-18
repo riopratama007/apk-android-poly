@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layout_home_memories"
+                layout="@layout/layout_home_memories"/>
+
+            <include
+                android:id="@+id/layout_home_moment"
+                layout="@layout/layout_home_moment"/>
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_job"-->
+<!--                layout="@layout/layout_home_job"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_business"-->
+<!--                layout="@layout/layout_home_business"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_content_creative"-->
+<!--                layout="@layout/layout_home_content_creative"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_video"-->
+<!--                layout="@layout/layout_home_video"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_store"-->
+<!--                layout="@layout/layout_home_store"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_ads"-->
+<!--                layout="@layout/layout_home_ads"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_collection"-->
+<!--                layout="@layout/layout_home_collection"/>-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout_home_profession"-->
+<!--                layout="@layout/layout_home_profession"/>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

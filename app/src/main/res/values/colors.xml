@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333D51</color>
+    <color name="colorPrimaryVariant">#5FC1CE</color>
+    <color name="colorSecondary">#BC338D</color>
+    <color name="colorSecondaryVariant">#D3AC2B</color>
+    <color name="colorSoftGray">#FAFAFA</color>
+    <color name="colorDarkGray">#E6E6E6</color>
+    <color name="colorRed">#EE534F</color>
+    <color name="colorBlue">#4F9DEB</color>
+    <color name="colorLine">#F2F3F3</color>
+    <color name="colorDarkBlue">#333D51</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgColorBackButton">#80434343</color>
+    <color name="blueIce">#F4F8F8</color>
+    <color name="colorBlack75">#BF000000</color>
+    <color name="ucrop_color_toolbar">@color/white</color>
+    <color name="ucrop_color_statusbar">@color/colorPrimaryVariant</color>
+    <color name="ucrop_color_widget_active">@color/colorSecondary</color>
+</resources>

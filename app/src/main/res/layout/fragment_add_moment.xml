@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.home.AddMomentFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.Toolbar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_round_arrow_back_primary"
+            app:title="@string/create_moment"
+            app:titleTextColor="@color/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_business"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/upload_image"
+                    android:src="@drawable/img_add_photo" />
+
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:hint="@string/share_your_moment"
+                app:boxBackgroundColor="@color/blueIce"
+                app:boxStrokeWidth="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_share_moment"
+                    style="@style/TextAppearance.MdcTypographyStyles.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="start"
+                    android:imeOptions="actionNext"
+                    app:boxBackgroundColor="@color/blueIce" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_camera_or_video"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginTop="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:clickable="true"
+                android:drawablePadding="4dp"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/camera_or_video"
+                app:drawableStartCompat="@drawable/ic_camera" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_list_media" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/dimens_medium"
+                android:layout_marginEnd="@dimen/dimens_medium"
+                android:clickable="true"
+                android:drawablePadding="4dp"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/location"
+                app:drawableStartCompat="@drawable/ic_location" />
+
+            <Button
+                android:id="@+id/btn_post"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_medium"
+                android:backgroundTint="@color/colorPrimaryVariant"
+                android:fontFamily="@font/poppins"
+                android:text="@string/post"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

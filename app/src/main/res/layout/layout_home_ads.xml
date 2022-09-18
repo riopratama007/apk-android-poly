@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_user_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_small"
+            android:layout_marginEnd="@dimen/dimens_small"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toStartOf="@+id/img_more"
+            app:layout_constraintStart_toEndOf="@+id/img_user_profile"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile">
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sinta Whina" />
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iklan" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toStartOf="@+id/img_cancel"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimens_medium"
+            android:contentDescription="@string/user_profile"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_user_profile" />
+
+        <TextView
+            android:id="@+id/tv_caption"
+            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dimens_small"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_user_profile"
+            android:drawablePadding="@dimen/dimens_small"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ea takimata sanctus est"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_caption">
+
+            <ImageView
+                android:id="@+id/img_feed"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/user_profile"
+                android:layout_marginTop="@dimen/dimens_small"
+                android:src="@drawable/dummy_ads" />
+
+            <TextView
+                android:background="@color/colorDarkBlue"
+                android:textColor="@color/white"
+                android:padding="@dimen/dimens_small"
+                android:layout_gravity="bottom"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kunjungi Website"/>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

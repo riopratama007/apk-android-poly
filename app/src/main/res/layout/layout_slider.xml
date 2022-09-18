@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.poly.utils.Datas.Slider" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimens_medium"
+            android:setImageResource="@{data.image}"
+            tools:src="@drawable/img_slider_one"
+            android:contentDescription="@string/slider_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dimens_medium"
+            android:layout_marginStart="@dimen/dimens_medium"
+            android:layout_marginTop="@dimen/dimens_medium"
+            style="@style/TextAppearance.MdcTypographyStyles.Headline6"
+            android:text="@{data.title}"
+            tools:text="@string/slider_title_one"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dimens_medium"
+            android:layout_marginBottom="@dimen/dimens_medium"
+            android:layout_marginStart="@dimen/dimens_medium"
+            android:layout_marginTop="@dimen/dimens_small"
+            style="@style/TextAppearance.MdcTypographyStyles.Body1"
+            android:text="@{data.description}"
+            tools:text="@string/slider_description_one"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_medium"
+        android:text="@string/business"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TextAppearance.MdcTypographyStyles.Body2"
+        android:layout_width="0dp"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_medium"
+        android:text="@string/see_all"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <HorizontalScrollView
+        android:layout_marginTop="@dimen/dimens_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:cardCornerRadius="@dimen/dimens_small"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dimens_small"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_business_1" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginTop="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bisnis Property" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:layout_marginBottom="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bekasi" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dimens_small"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_business_2" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginTop="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bisnis Sepatu" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:layout_marginBottom="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bekasi" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dimens_small"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_business_1" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginTop="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bisnis Ruko" />
+
+                        <TextView
+                            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimens_small"
+                            android:layout_marginEnd="@dimen/dimens_small"
+                            android:layout_marginBottom="@dimen/dimens_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Bekasi" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

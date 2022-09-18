@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_medium"
+        android:text="@string/store"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TextAppearance.MdcTypographyStyles.Body2"
+        android:layout_width="0dp"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_medium"
+        android:text="@string/see_all"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_small"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_product_one" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Vp Drinking Water 1500 Ml Botol" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Rp25,000" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Bekasi Barat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimens_small"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:drawablePadding="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="5.0"
+                        app:drawableStartCompat="@drawable/ic_outline_star" />
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="| Terjual 500+" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_product_two" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="BRODO - Sneakers Active Sprint Navy WS" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Rp300,000" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Karawang" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimens_small"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:drawablePadding="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="4.1"
+                        app:drawableStartCompat="@drawable/ic_outline_star" />
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="| Terjual 100+" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_product_three" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Tas Louis Andrean" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Rp1,200,000"/>
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Sudirman" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimens_small"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:drawablePadding="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="4.6"
+                        app:drawableStartCompat="@drawable/ic_outline_star" />
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="| Terjual 1500+" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dimens_small"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_product_four" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginTop="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Skin Care" />
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Rp80,000"/>
+
+                <TextView
+                    style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_small"
+                    android:layout_marginEnd="@dimen/dimens_small"
+                    android:layout_marginBottom="@dimen/dimens_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Bekasi Barat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimens_small"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:drawablePadding="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="5.0"
+                        app:drawableStartCompat="@drawable/ic_outline_star" />
+
+                    <TextView
+                        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimens_small"
+                        android:layout_marginBottom="@dimen/dimens_small"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="| Terjual 500+" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
